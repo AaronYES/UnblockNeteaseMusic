@@ -10,6 +10,20 @@ const svc = new Service({
 	maxRestarts: '40', // 60秒内最大重启次数
 });
 
+	env:[{
+		name:"ENABLE_FLAC",//激活无损音质获取
+		value:"true"
+	},
+	{
+	  	name:"NO_CACHE",//停用 cache	
+	 	value:"true"
+	},
+		{
+		name:"ENABLE_LOCAL_VIP",//本地黑胶vip
+		value:"true"
+	}]
+
+
 // 监听
 svc.on('install', () => {
 	svc.start();
